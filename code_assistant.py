@@ -30,11 +30,3 @@ class CodeAssistant():
         repo_str = self.get_repo_str(repo_name, repo_dir)
         response = self.review_code(repo_str)
         return response
-
-
-if __name__ == '__main__':
-    repo_dir = "/home/yinrigao/pkgs/txt2ppt"
-    repo_name = "txt2ppt"
-    ca = CodeAssistant()
-    res = ca(repo_name, repo_dir)
-    print(res)

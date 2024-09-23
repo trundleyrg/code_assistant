@@ -7,12 +7,12 @@ from utils.setting import CUDA_VISIBLE_DEVICES
 os.environ['CUDA_VISIBLE_DEVICES'] = CUDA_VISIBLE_DEVICES
 
 
-def tokenizer_initial(tokenizer_path=r'/home/yinrigao/models/qwen25_coder_7b'):
+def tokenizer_initial(tokenizer_path):
     tokenizer = AutoTokenizer.from_pretrained(tokenizer_path)
     return tokenizer
 
 
-def model_initial(model_path=r"/home/yinrigao/models/qwen25_coder_7b"):
+def model_initial(model_path):
     model = LLM(model=model_path)
     return model
 
