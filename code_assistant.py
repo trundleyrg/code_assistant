@@ -22,8 +22,15 @@ class CodeAssistant():
         return res
 
     def review_code(self, repo_str):
+        """代码检查"""
         review_prompt = "请根据已有的代码情况，检查代码中可能存在问题的代码，标记出来并给出修改样例。"
         res = self.inference(review_prompt, repo_str)
+        return res
+
+    def write_code(self, repo_str):
+        """代码实现"""
+        write_code_prompt = "请根据用户的请求，实现对应的代码。"
+        res = self.inference(write_code_prompt, repo_str)
         return res
 
     def __call__(self, repo_name, repo_dir):
